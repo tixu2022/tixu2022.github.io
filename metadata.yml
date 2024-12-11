@@ -1,0 +1,25 @@
+sections:
+  still:
+  motion:
+    order:
+      - name: Snow-Bird
+      - name: skipping-summer-1
+      - name: pigeon-boy
+      - name: mid-autumn
+      - name: Cat_Kisser
+      - name: Grinding-Teeth
+      - name: horse-gallop
+      # - name: kangaroo
+  story:
+    order:
+      - name: alter-ego
+        select: [1,2,6]
+      - name: the-station
+        select: [1,5,2]
+      - name: a-tour-in-the-sky
+      - name: broken-wings
+        select: [1,2,3]
+      - name: almost          
+  on-scene:
+  whim:
+  

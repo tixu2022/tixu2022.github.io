@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ti Xu – visual grocery</title>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <a href="/"><img id="logo" src="thumbnails/grocery-logo_square.avif"></a>
+
+    <div id="info">
+    <h1>Ti Xu</h1>
+    <span id="role">visual grocer</span>
+    <nav>
+    <a href="about.html">About</a> | <a href="https://www.instagram.com/ti_xu_art/">IG</a> | <a href="mailto:tixu2024[at]gmail.com">Mail</a>
+    </nav>
+    </div>
+  </header>
+
+  <content>
+  {% for section in sections %}
+  <section>
+    <h2>{{ section.title | title }}</h2>
+    <div class="entries">
+      {% for entry in section.entries %}
+      {% if entry.type == "image" %}
+        <div class="entry image">
+        
+          <a href="{{ section.title }}/{{ entry.name }}.html">
+          {% if entry.src.endswith("webm") %}
+            <video src="{{ entry.src }}" autoplay loop>
+          {% else %}
+            <img src="{{ entry.src }}">
+          {% endif %}
+          </a>
+        </div>
+      {% else %}
+        <div class="entries gallery">        
+          {% for image in entry.images %}
+            <div class="entry image">
+            <a href="{{ section.title}}/{{ entry.name }}.html">
+            <img src="{{ image.src }}">
+            </a>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  </content>
+</body>
+</html>
