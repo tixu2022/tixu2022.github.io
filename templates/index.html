@@ -19,14 +19,15 @@
     </div>
   </header>
 
-  <content>
+  <main>
   {% for section in sections %}
   <section>
     <h2>{{ section.title | title }}</h2>
     <div class="entries">
       {% for entry in section.entries %}
       {% if entry.type == "image" %}
-        <div class="entry image">
+        <figure class="entry image">
+          <figcaption>{{ entry.title }}</figcaption>
         
           <a href="{{ section.title }}/{{ entry.name }}.html">
           {% if entry.src.endswith("webm") %}
@@ -35,22 +36,23 @@
             <img src="{{ entry.src }}">
           {% endif %}
           </a>
-        </div>
+        </figure>
       {% else %}
-        <div class="entries gallery">        
-          {% for image in entry.images %}
+        <figure class="entries gallery">        
+          <figcaption>{{ entry.title }}</figcaption>
+          {% for image in entry.selected_images %}
             <div class="entry image">
-            <a href="{{ section.title}}/{{ entry.name }}.html">
+            <a href="{{ section.title }}/{{ entry.name }}.html">
             <img src="{{ image.src }}">
             </a>
             </div>
           {% endfor %}
-        </div>
+        </figure>
       {% endif %}
       {% endfor %}
     </div>
   </section>
   {% endfor %}
-  </content>
+  </main>
 </body>
 </html>

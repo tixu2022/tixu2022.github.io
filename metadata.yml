@@ -4,22 +4,37 @@ sections:
     order:
       - name: Snow-Bird
       - name: skipping-summer-1
+        title: Skipping Summer
       - name: pigeon-boy
       - name: mid-autumn
       - name: Cat_Kisser
       - name: Grinding-Teeth
+      - name: kangaroo
       - name: horse-gallop
-      # - name: kangaroo
   story:
     order:
       - name: alter-ego
         select: [1,2,6]
       - name: the-station
         select: [1,5,2]
-      - name: a-tour-in-the-sky
+      # - name: a-tour-in-the-sky
       - name: broken-wings
         select: [1,2,3]
       - name: almost          
   on-scene:
+    order:
+      - name: IMG_5313
+        title: Newport
+      - name: IMG_5198-2
+      - name: IMG_6494
+      # - name: IMG_7998-2
+      # - name: IMG_8031-2
+      - name: IMG_5107
   whim:
+    order:
+      - name: house-bird
+      - name: bird-feeder
+      - name: ti-bird
+        title: Stroll
+      - name: mouse-bird
   
