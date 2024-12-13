@@ -31,9 +31,9 @@
         
           <a href="{{ section.title }}/{{ entry.name }}.html">
           {% if entry.src.endswith("webm") %}
-            <video src="{{ entry.src }}" autoplay muted loop>
+            <video src="{{ entry.thumb }}" autoplay muted loop>
           {% else %}
-            <img src="{{ entry.src }}">
+            <img src="{{ entry.thumb }}">
           {% endif %}
           </a>
         </figure>
