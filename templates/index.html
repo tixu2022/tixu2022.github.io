@@ -31,7 +31,7 @@
         
           <a href="{{ section.title }}/{{ entry.name }}.html">
           {% if entry.src.endswith("webm") %}
-            <video src="{{ entry.src }}" autoplay loop>
+            <video src="{{ entry.src }}" autoplay muted loop>
           {% else %}
             <img src="{{ entry.src }}">
           {% endif %}
@@ -43,7 +43,7 @@
           {% for image in entry.selected_images %}
             <div class="entry image">
             <a href="{{ section.title }}/{{ entry.name }}.html">
-            <img src="{{ image.src }}">
+            <img src="{{ image.thumb }}">
             </a>
             </div>
           {% endfor %}

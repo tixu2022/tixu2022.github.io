@@ -23,7 +23,7 @@
     <h2>{{ entry.title }}</h2>
     {% if entry.type == "image" %}
         {% if entry.thumb.endswith("webm") %}
-          <video src="../{{ entry.src }}" autoplay loop>
+          <video src="../{{ entry.src }}" autoplay muted loop>
         {% else %}
           <img src="../{{ entry.src }}">
         {% endif %}
