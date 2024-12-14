@@ -26,10 +26,13 @@ sections:
       - name: IMG_5313
         title: Newport
       - name: IMG_5198-2
+        title: Playground
       - name: IMG_6494
+        title: Bryant Park
       # - name: IMG_7998-2
       # - name: IMG_8031-2
       - name: IMG_5107
+        title: Jersey
   whim:
     order:
       - name: house-bird
