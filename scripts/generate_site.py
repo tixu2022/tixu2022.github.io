@@ -87,12 +87,21 @@ def generate():
 
     copy_static()
 
-    index = env.get_template("index.html")
-    with open("public/index.html", "w") as f:
-        f.write(index.render(sections=sections))
-    about = env.get_template("about.html")
-    with open("public/about.html", "w") as f:
-        f.write(about.render(sections=sections))
+    navigation = [
+        { "name": "Home", "href": "/index.html" },
+        { "name": "About", "href": "/about.html" },
+        { "name": "IG", "href": "https://www.instagram.com/ti_xu_art/" },
+        { "name": "Mail", "href": "mailto:tixu2024[at]gmail.com" },
+    ]
+
+    for page in ["index", "about"]:
+        templ = env.get_template(f"{page}.html")
+        filtered_navigation = [item for item in navigation if item["href"] != f"/{page}.html"]
+        with open(f"public/{page}.html", "w") as f:
+            f.write(templ.render(
+                sections=sections,
+                navigation=filtered_navigation
+            ))
 
     single = env.get_template("single.html")
     for section in sections:

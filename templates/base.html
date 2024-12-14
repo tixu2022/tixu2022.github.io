@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ti Xu – visual grocery</title>
+  <title>{% block title %}Ti Xu – visual grocery{% endblock %}</title>
   <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,15 +14,19 @@
     <h1>Ti Xu</h1>
     <span id="role">visual grocer</span>
     <nav>
+    {% for item in navigation %}
+      <a href="{{ item.href }}">{{ item.name }}</a>
+      {% if not loop.last %}
+        |
+      {% endif %}
+    {% endfor %}
     </nav>
     </div>
   </header>
 
   <main>
-  <div class="single">
-    <h2>Kangaroo</h2>
-          <video src="/images/motion/kangaroo.webm" autoplay muted loop>
-  </div>
+  {% block content %}{% endblock %}
   </main>
 </body>
 </html>
+

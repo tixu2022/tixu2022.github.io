@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Ti Xu – visual grocery</title>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-  <header>
-    <a href="/"><img id="logo" src="thumbnails/grocery-logo_square.avif"></a>
-
-    <div id="info">
-    <h1>Ti Xu</h1>
-    <span id="role">visual grocer</span>
-    <nav>
-    <a href="about.html">About</a> | <a href="https://www.instagram.com/ti_xu_art/">IG</a> | <a href="mailto:tixu2024[at]gmail.com">Mail</a>
-    </nav>
-    </div>
-  </header>
-
-  <main>
+{% extends "base.html" %}
+{% block content %}
   {% for section in sections %}
   <section>
     <h2>{{ section.title | title }}</h2>
@@ -53,6 +33,4 @@
     </div>
   </section>
   {% endfor %}
-  </main>
-</body>
-</html>
+{% endblock %}
