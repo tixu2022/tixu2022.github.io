@@ -117,7 +117,7 @@ def generate():
             if not os.path.isdir(f"public/{section["title"]}"):
                 os.makedirs(directory)
             with open(f"{directory}/{entry["name"]}.html", "w") as f:
-                f.write(single.render(entry=entry))
+                f.write(single.render(entry=entry, navigation=navigation))
 
 
 generate()
