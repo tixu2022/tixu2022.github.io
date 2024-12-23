@@ -98,6 +98,7 @@ def generate():
     navigation = [
         {"name": "Home", "href": "/index.html"},
         {"name": "About", "href": "/about.html"},
+        # {"name": "Commission", "href": "/commissions.html"},
         {"name": "IG", "href": "https://www.instagram.com/ti_xu_art/"},
         {"name": "Mail", "href": "mailto:tixu2024[at]gmail.com"},
     ]

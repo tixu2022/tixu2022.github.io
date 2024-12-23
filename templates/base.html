@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    {% block header %}
     <a href="/"><img id="logo" src="/thumbnails/grocery-logo_square.avif"></a>
 
     <div id="info">
@@ -22,6 +23,7 @@
     {% endfor %}
     </nav>
     </div>
+    {% endblock %}
   </header>
 
   <main>

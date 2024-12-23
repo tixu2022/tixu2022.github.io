@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
+{% block header %}
+{% endblock %}
+
 {% block content %}
+<a href="/" class="back-link">◁ <span class="back-link-underline">Back</span></a>
   <div class="single">
     <h2>{{ entry.title }}</h2>
     {% if entry.type == "image" %}

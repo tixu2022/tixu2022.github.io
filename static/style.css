@@ -40,7 +40,7 @@ header nav {
 
 h2 {
   font-weight: 300;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 main {
@@ -147,4 +147,16 @@ figure:hover figcaption {
 }
 .single .gallery .entry {
   height:100%;
+}
+
+.back-link {
+  text-decoration: none;
+  margin-top:0.5em;
+  display: block;
+  color: #222;
+  margin-left:0.5em;
+}
+
+.back-link-underline {
+  text-decoration: underline;
 }
