@@ -115,11 +115,11 @@ def generate():
     section_index = env.get_template("section.html")
     for section in sections:
         directory = f"public/{section["title"]}"
+        if not os.path.isdir(f"public/{section["title"]}"):
+            os.makedirs(directory)
         with open(f"{directory}/index.html", "w") as f:
             f.write(section_index.render(title=section["title"],entries=section["entries"]))
         for entry in section["entries"]:
-            if not os.path.isdir(f"public/{section["title"]}"):
-                os.makedirs(directory)
             with open(f"{directory}/{entry["name"]}.html", "w") as f:
                 f.write(single.render(entry=entry, navigation=navigation))
 
