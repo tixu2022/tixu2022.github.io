@@ -7,9 +7,8 @@
       {% for entry in section.entries %}
       {% if entry.type == "image" %}
         <figure class="entry image">
-          <figcaption>{{ entry.title }}</figcaption>
-        
           <a href="{{ section.title }}/{{ entry.name }}.html">
+          <figcaption>{{ entry.title }}</figcaption>
           {% if entry.src.endswith("webm") %}
             <video src="{{ entry.thumb }}" autoplay muted loop>
           {% else %}
