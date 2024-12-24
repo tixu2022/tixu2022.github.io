@@ -1,19 +1,23 @@
 {% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
 {% block content %}
-  {% for section in sections %}
-  <section>
-    <h2><a href="/{{ section.title }}">{{ section.title | title }}</a></h2>
+  <div class="back-link"><a href="javascript:history.back()">◁ <span class="back-link-underline">Back</span></a></div>
+  <div class="section-index">
+    <h2>{{ title | title }}</h2>
     <div class="entries">
-      {% for entry in section.entries %}
+      {% for entry in entries %}
       {% if entry.type == "image" %}
         <figure class="entry image">
           <figcaption>{{ entry.title }}</figcaption>
         
-          <a href="{{ section.title }}/{{ entry.name }}.html">
+          <a href="/{{ title }}/{{ entry.name }}.html">
           {% if entry.src.endswith("webm") %}
-            <video src="{{ entry.thumb }}" autoplay muted loop>
+            <video src="/{{ entry.thumb }}" autoplay muted loop>
           {% else %}
-            <img src="{{ entry.thumb }}">
+            <img src="/{{ entry.thumb }}">
           {% endif %}
           </a>
         </figure>
@@ -22,8 +26,8 @@
           <figcaption>{{ entry.title }}</figcaption>
           {% for image in entry.selected_images %}
             <div class="entry image">
-            <a href="{{ section.title }}/{{ entry.name }}.html">
-            <img src="{{ image.thumb }}">
+            <a href="/{{ title }}/{{ entry.name }}.html">
+            <img src="/{{ image.thumb }}">
             </a>
             </div>
           {% endfor %}
@@ -31,6 +35,6 @@
       {% endif %}
       {% endfor %}
     </div>
-  </section>
-  {% endfor %}
+  </div>
 {% endblock %}
+

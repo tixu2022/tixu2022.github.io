@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-<a href="/" class="back-link">◁ <span class="back-link-underline">Back</span></a>
+  <div class="back-link"><a href="javascript:history.back()">◁ <span class="back-link-underline">Back</span></a></div>
   <div class="single">
     <h2>{{ entry.title }}</h2>
     {% if entry.type == "image" %}
