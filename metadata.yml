@@ -1,5 +1,5 @@
 sections:
-  still:
+  single:
   motion:
     order:
       - name: Snow-Bird
