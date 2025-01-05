@@ -16,28 +16,27 @@
     <div class="entries">
       {% for entry in entries %}
       {% if entry.type == "image" %}
-        <figure class="entry image">
+        <a href="/{{ title }}/{{ entry.name }}.html" class="entry">
+        <figure class="image">
           <figcaption>{{ entry.title }}</figcaption>
-        
-          <a href="/{{ title }}/{{ entry.name }}.html">
           {% if entry.src.endswith("webm") %}
             <video src="/{{ entry.thumb }}" autoplay muted loop>
           {% else %}
             <img src="/{{ entry.thumb }}">
           {% endif %}
-          </a>
         </figure>
+        </a>
       {% else %}
+        <a href="/{{ title }}/{{ entry.name }}.html" class="entries gallery">
         <figure class="entries gallery">        
           <figcaption>{{ entry.title }}</figcaption>
           {% for image in entry.selected_images %}
             <div class="entry image">
-            <a href="/{{ title }}/{{ entry.name }}.html">
             <img src="/{{ image.thumb }}">
-            </a>
             </div>
           {% endfor %}
         </figure>
+        </a>
       {% endif %}
       {% endfor %}
     </div>
