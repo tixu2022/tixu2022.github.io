@@ -20,7 +20,7 @@
         <figure class="image">
           <figcaption>{{ entry.title }}</figcaption>
           {% if entry.src.endswith("webm") %}
-            <video autoplay muted loop>
+            <video autoplay muted loop playsinline disablepictureinpicture>
               <source src="/{{ entry.thumb }}" type="video/webm">
             </video>
           {% else %}
