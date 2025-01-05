@@ -20,7 +20,9 @@
         <figure class="image">
           <figcaption>{{ entry.title }}</figcaption>
           {% if entry.src.endswith("webm") %}
-            <video src="/{{ entry.thumb }}" autoplay muted loop>
+            <video autoplay muted loop>
+              <source src="/{{ entry.thumb }}" type="video/webm">
+            </video>
           {% else %}
             <img src="/{{ entry.thumb }}">
           {% endif %}
