@@ -54,7 +54,7 @@ h2 a {
 
 main {
   display: block;
-  max-width: 50em;
+  /* max-width: 50em; */
   margin: auto;
   padding-bottom: 1em;
 }
