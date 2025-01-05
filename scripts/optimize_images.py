@@ -26,6 +26,7 @@ trial_exts = {
     ".jpeg": [".webp", ".avif"],
     ".gif": [".webm"],
     ".mov": [".webm"],
+    ".mp4": [".webm"],
 }
 
 

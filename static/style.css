@@ -171,3 +171,7 @@ figure:hover figcaption {
 .back-link-underline {
   text-decoration: underline;
 }
+
+#demoreel {
+  width:100%;
+}
