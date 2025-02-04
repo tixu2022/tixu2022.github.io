@@ -1,5 +1,21 @@
 sections:
   single:
+    - name: "2023-mid-autumn"
+    - name: "dog"
+    - name: "doubleLotus_riso_blue"
+    - name: "dragon-dance"
+    - name: "Fuzzy-postcard_"
+    - name: "lunar_dragon"
+    - name: "lunar_rabbit"
+    - name: "morningDew"
+      title: "Morning Dew"
+    - name: "nyc-adventure"
+    - name: "red_bird"
+    - name: "robot-sky"
+    - name: "snake_green"
+    - name: "stunning"
+    - name: "traffic"
+    - name: "Weather"
   motion:
     order:
       - name: "Snow-Bird"
