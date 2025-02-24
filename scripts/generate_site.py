@@ -93,6 +93,8 @@ def generate():
 
     sections = load_sections(metadata)
 
+    os.mkdir("public")
+
     copy_static()
 
     navigation = [
