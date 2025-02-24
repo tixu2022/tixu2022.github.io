@@ -73,7 +73,8 @@ main {
 .entry {
   /* aspect-ratio:1; */
   /* max-width:100%; */
-  width: 10em;
+  min-width: 10em;
+  max-width: 25%;
   flex: 1 0 auto;
 }
 

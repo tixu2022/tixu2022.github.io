@@ -67,7 +67,7 @@ def optimize_directory(src, dest_prefix):
 def resize_directory(src, dest):
     for file in glob.iglob(src + "/**/*.*", recursive=True):
         os.makedirs(os.path.dirname(dest + file.removeprefix(src)), exist_ok=True)
-        resize(file, dest + file.removeprefix(src), 700)
+        resize(file, dest + file.removeprefix(src), 1200)
 
 
 optimize_directory("images", "static/")
